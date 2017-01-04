@@ -16,7 +16,6 @@ class TableViewViewController: UIViewController,UITableViewDelegate,UITableViewD
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("memes \(memes.count)")
         return memes.count
     }
 
@@ -38,7 +37,6 @@ class TableViewViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         memes = appDelegate.memes
-        print("memes count is \(memes.count)")
         tableView.reloadData()
     }
     
